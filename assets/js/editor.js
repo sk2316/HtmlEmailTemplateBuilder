@@ -411,6 +411,7 @@
 		editorLoad : function(){
 			mb.chooseTemplate.fadeOut(function(){
 				$(this).hide().addClass('hidden');
+				$('.nav-options').addClass('hidden');
 				$('.navbar').removeClass('scroller');
 				$('.navbar').removeClass('custom-bg');
 				$('.navbar').removeClass('nav-fixed');
@@ -2003,6 +2004,22 @@
 		}
 		else
 			$input.parent().after('<div class="alert alert-danger" role="alert">You must insert email address.</div>');
+	});
+
+	/* save Email Form in attachment folder */
+	$("#send-message").on('click',function(e){
+		e.preventDefault();
+		
+		var $button = $(this),
+			data = $("#mail-template").html();
+			data = data.replace(/(<button.*?>.*?<\/button>)/g,'');
+			console.log(data);
+			// $.get(window.base + '/attachment/index.html' , function(data2){
+   //  				console.log('new file>>'+$(this));
+   //  				// $(data2).append(data);
+   //  				console.log('data2'+data2);
+			// });
+
 	});
 	
 	/* Test Email Form */
