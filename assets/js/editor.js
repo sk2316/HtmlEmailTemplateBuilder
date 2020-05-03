@@ -956,14 +956,14 @@
                         
                         tooltip+="<div class='br'></div>";
                         
-                        tooltip+="<div class='text-left'>\
-                                    <button type='button' class='btn btn-default' id='CreateDynamicImage'>\
-                                        <span class='glyphicon glyphicon-picture'></span> Create Generic Image\
-                                    </button> \
-                                    <button type='button' class='btn btn-danger hidden' id='DeleteDynamicImage'>\
-                                        <span class='glyphicon glyphicon-remove'></span> Remove Generic Image\
-                                    </button>\
-                            </div>";
+                        // tooltip+="<div class='text-left'>\
+                        //             <button type='button' class='btn btn-default' id='CreateDynamicImage'>\
+                        //                 <span class='glyphicon glyphicon-picture'></span> Create Generic Image\
+                        //             </button> \
+                        //             <button type='button' class='btn btn-danger hidden' id='DeleteDynamicImage'>\
+                        //                 <span class='glyphicon glyphicon-remove'></span> Remove Generic Image\
+                        //             </button>\
+                        //     </div>";
                     break;
                         
                         

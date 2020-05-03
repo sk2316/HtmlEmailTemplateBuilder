@@ -251,7 +251,7 @@ function include_style(string $url, string $version='', string $path=''){
             </div>
             
         </div>
-        <div class="container-content hidden" id="mail-template" style="padding-top: 50px; background-color: #e1e1e1;">
+        <div class="container-content hidden" id="mail-template" style="padding-top: 90px; background-color: #e1e1e1;">
             Content
         </div>
         
@@ -260,7 +260,7 @@ function include_style(string $url, string $version='', string $path=''){
 	<div id="modal" class="reset-this"></div>
     <button class="btn btn-lg btn-success btn-materialize btn-left-bottom btn-left-bottom-1 hidden" type="button" id="preview" title="Preview" data-toggle="tooltip" data-placement="top" data-trigger="hover"><span class="glyphicon glyphicon-zoom-in"></span></button>
       
-    <form method="post" enctype="multipart/form-data" class="btn btn-lg btn-primary btn-materialize btn-left-bottom btn-left-bottom-2 hidden" type="button" id="attachment" title="Attachment 7Mb Max" data-toggle="tooltip" data-placement="top" data-trigger="hover" style="-webkit-appearance:none;"><span class="glyphicon glyphicon-paperclip"></span><input type="file" name="attachment[]"></form>
+    <!-- <form method="post" enctype="multipart/form-data" class="btn btn-lg btn-primary btn-materialize btn-left-bottom btn-left-bottom-2 hidden" type="button" id="attachment" title="Attachment 7Mb Max" data-toggle="tooltip" data-placement="top" data-trigger="hover" style="-webkit-appearance:none;"><span class="glyphicon glyphicon-paperclip"></span><input type="file" name="attachment[]"></form> -->
       
     <button class="btn btn-lg btn-default btn-materialize btn-left-bottom btn-left-bottom-3 hidden" type="button" id="setting" title="Layout Options" data-toggle="tooltip" data-placement="top" data-trigger="hover"><span class="fa fa-cog fa-spin"></span></button>      
       
