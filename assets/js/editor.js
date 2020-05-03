@@ -1960,6 +1960,7 @@
 		});
 	});
 	
+	/*
 	$(document).on('click','#test-submit', function(e){
 		e.preventDefault();
 		var $button = $(this),
@@ -2005,6 +2006,7 @@
 		else
 			$input.parent().after('<div class="alert alert-danger" role="alert">You must insert email address.</div>');
 	});
+	*/
 
 	/* save Email Form in attachment folder */
 	$("#send-message").on('click',function(e){
@@ -2013,7 +2015,6 @@
 		var $button = $(this),
 			data = $("#mail-template").html();
 			data = data.replace(/(<button.*?>.*?<\/button>)/g,'');
-			console.log(data);
 			// $.get(window.base + '/attachment/index.html' , function(data2){
    //  				console.log('new file>>'+$(this));
    //  				// $(data2).append(data);
@@ -2021,7 +2022,9 @@
 			// });
 
 	});
-	
+
+	var HTMLDATA;
+
 	/* Test Email Form */
 	$("#test").on('click',function(e){
 		e.preventDefault();
@@ -2030,20 +2033,25 @@
 			data = $("#mail-template").html();
 			data = data.replace(/(<button.*?>.*?<\/button>)/g,''),
 			form = '';
-			
-			form+= '<div class="input-group input-group-lg">';
-				form+= '<span class="input-group-addon">@</span>';
-				form+= '<input type="text" class="form-control" placeholder="test@example.com" value="" id="test-input">';
-			form+= '</div>';
-			
-			data = '<div id="saved-template" class="hidden">' + data + '</div>' + form;
-		
+			form += '<form method="POST" action="sendEmailTemplate.php">'
+				form+= '<div class="input-group input-group-md">';
+				form += '<h5>Select type of Environment</h5>';
+				form += '<select class="form-control" name="type_of_org"><option value="production" selected="selected">Production</option> <option value="sandbox">Sandbox</option> </select>';
+				form += `<input type="hidden" name="HTMLBody" id="HTMLBody" value='`+data+`' >`;				
+				form += '<input type="submit" value="Login" name="authenticate" class="btn btn-block btn-success" id="test-submit" >';	
+				data = '<div id="saved-template" class="hidden">' + data + '</div>' + form;
+				
+				form+= '</div>';
+			form += '</form>';
+			HTMLDATA = data;
+
 		$button.prop('disabled',true);
 		
 		$("#modal").createModal({
-			header		: "Send Test E-Mail",
+			header		: "Login to Salesforce",
 			content		: data,
-			footer		: '<button class="btn btn-block btn-success" id="test-submit" type="button">Send Message</button>',
+			// footer		: '<button class="btn btn-block btn-success" id="test-submit" type="button">Login</button>',
+			// footer		: '<input type="submit" value="Login" class="btn btn-block btn-success" id="test-submit" >',
 			keyboard 	: true,
 			static 		: true,
 			close		: true,
@@ -2126,6 +2134,13 @@
 			},200);
 		});
 	});
+
+	// $(document).on('click','#test-submit', function(e){
+	// 	e.preventDefault();
+	// 	$('$HTMLBody').val(HTMLDATA);
+	// 	console.log('clicked', $('#HTMLBody').val());
+	// });
+
 	
 	/*****************************************************************
 	 * Global Page Style Settings
