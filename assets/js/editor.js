@@ -2033,10 +2033,10 @@
 			data = $("#mail-template").html();
 			data = data.replace(/(<button.*?>.*?<\/button>)/g,''),
 			form = '';
-			form += '<form method="POST" action="sendEmailTemplate.php">'
+			form += '<form method="POST" action="sendEmailTemplate.php" style="padding: 20px;">'
 				form+= '<div class="input-group input-group-md">';
 				form += '<h5>Select type of Environment</h5>';
-				form += '<select class="form-control" name="type_of_org"><option value="production" selected="selected">Production</option> <option value="sandbox">Sandbox</option> </select>';
+				form += '<select class="form-control" name="type_of_org"  style="margin-bottom: 20px !important;"><option value="production" selected="selected">Production</option> <option value="sandbox">Sandbox</option> </select>';
 				form += `<input type="hidden" name="HTMLBody" id="HTMLBody" value='`+data+`' >`;				
 				form += '<input type="submit" value="Login" name="authenticate" class="btn btn-block btn-success" id="test-submit" >';	
 				data = '<div id="saved-template" class="hidden">' + data + '</div>' + form;
