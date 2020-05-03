@@ -159,6 +159,9 @@ function include_style(string $url, string $version='', string $path=''){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <title>Email-Teamplet Creator</title>
+    <!-- Font Awesome icons (free version)-->
+        <!-- <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <?=include_style('assets/css/style-sk.css'); ?>
     <?=include_style('assets/css/bootstrap.min.css'); ?>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -169,8 +172,7 @@ function include_style(string $url, string $version='', string $path=''){
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
     <?=include_style('assets/css/style.css'); ?>
     
-    <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+    
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -182,7 +184,7 @@ function include_style(string $url, string $version='', string $path=''){
     <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top nav-fixed custom-bg scroller" id="mainNav" style="margin-bottom: 0; border-radius: 0;">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Html Email Builder</a><button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Html Email Builder</a><button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fa fa-bars" aria-hidden="true"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto nav-options" style="float: right;">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#choose-template">Templates</a></li>
@@ -199,7 +201,7 @@ function include_style(string $url, string $version='', string $path=''){
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon"><i class="fa fa-star" aria-hidden="true"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
             </div>
@@ -210,11 +212,11 @@ function include_style(string $url, string $version='', string $path=''){
         <section class="page-section portfolio" id="choose-template" style="width: 100%;">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Templates</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Choose your Template</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon"><i class="fa fa-star" aria-hidden="true"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <div class="row">
@@ -427,13 +429,13 @@ function include_style(string $url, string $version='', string $path=''){
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon"><i class="fa fa-star" aria-hidden="true"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    <div class="col-lg-4 ml-auto"><p class="lead">HTML Email Template. Sometimes all you want is a really simple responsive HTML email template with a clear call-to-action.</p></div>
+                    <div class="col-lg-4 mr-auto"><p class="lead">Browse our selection Each template is responsive, fully customizable, and can be edited and optimized for your brand!</p></div>
                 </div>
                 
             </div>
@@ -451,12 +453,19 @@ function include_style(string $url, string $version='', string $path=''){
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-dribbble"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Team</h4>
-                        <p class="lead mb-0">Made by Delevlopers name Sourabh Kumar, Ajai Kumar, Sharatchi and Vivek.</p>
+                        <h4 class="text-uppercase mb-4">Design and development by:</h4>
+                        <p class="lead mb-0">
+                            <ul style="list-style-type: none;">
+                                <li>Sourabh Kumar</li>
+                                <li>Ajai Kumar</li>
+                                <li>Sharatchi Goyal</li>
+                                <li>Vivek Kumar</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </div>
